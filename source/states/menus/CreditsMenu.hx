@@ -110,14 +110,40 @@ class CreditsMenu extends MusicBeatState
             gitLink: "",
             scLink: null
         }
-    
     ];
     
     public var iconList:Array<FlxSprite> = [];
-	public var personList:Array<Credits> = [];
+    public var personList:Array<Credits> = [];
     var bg:FlxSprite;
     
-    // work in progress
+    override function create()
+    {
+    	// placeholder
+    	super.create();
+	
+	bg = new FlxSprite(-80);
+	bg.loadGraphic(Paths.image('menus/base/menuBG'));
+	bg.scrollFactor.set(0, 0.18);
+	bg.setGraphicSize(Std.int(bg.width * 1.1));
+	bg.updateHitbox();
+	bg.screenCenter();
+	bg.antialiasing = true;
+	add(bg);
+	
+	var placeholderTxt:FlxText = new FlxText(0, 0, 0, 'This menu is unfinished, please check back later!', 18);
+	placeholderTxt.setFormat((Paths.font("vcr"), 20, 0xFFFFFFFF, ForeverTools.setTextAlign('left'), FlxTextBorderStyle.OUTLINE, 0xFF000000);
+	placeholderTxt.scrollFactor.set();
+	add(placeholderTxt);
+    }
+    
+    override function update(elapsed:Float)
+    {
+    	if ((Controls.getPressEvent("back")))
+	{
+		FlxG.sound.play(Paths.sound('base/menus/cancelMenu'));
+		Main.switchState(this, new MainMenu());
+	}
+    }
 }
 
 
