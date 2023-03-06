@@ -131,8 +131,9 @@ class CreditsMenu extends MusicBeatState
 	add(bg);
 	
 	var placeholderTxt:FlxText = new FlxText(0, 0, 0, 'This menu is unfinished, please check back later!', 18);
-	placeholderTxt.setFormat((Paths.font("vcr"), 20, 0xFFFFFFFF, ForeverTools.setTextAlign('left'), FlxTextBorderStyle.OUTLINE, 0xFF000000);
+	placeholderTxt.setFormat((Paths.font("vcr"), 20, 0xFFFFFFFF, ForeverTools.setTextAlign('center'), FlxTextBorderStyle.OUTLINE, 0xFF000000);
 	placeholderTxt.scrollFactor.set();
+	placeholderTxt.screenCenter();
 	add(placeholderTxt);
     }
     
