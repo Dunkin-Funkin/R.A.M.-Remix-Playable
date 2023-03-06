@@ -2054,20 +2054,9 @@ class PlayState extends MusicBeatState
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
-		// change to the menu state
-		switch (gameplayMode)
-		{
-			case STORY:
-				Main.switchState(this, new StoryMenu());
-				ForeverTools.resetMenuMusic();
-				clearStored = true;
-			case FREEPLAY:
-				Main.switchState(this, new FreeplayMenu());
-				clearStored = true;
-			case CHARTING:
-				openSubState(new states.substates.PauseSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y,
-					["Back to Charter", "Leave Charter Mode", "Exit to Options", "Exit to Menu"]));
-		}
+		Main.switchState(this, new MainMenu());
+		clearStored = true;
+			
 	}
 
 	override function add(Object:FlxBasic):FlxBasic
