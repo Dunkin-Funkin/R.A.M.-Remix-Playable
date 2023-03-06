@@ -41,9 +41,12 @@ class CreditsMenu extends MusicBeatState
     public var verticalSelection:Int = 0;
 
     public var nameTxt:FlxText;
-	public var quoteTxt:FlxText;
+    public var quoteTxt:FlxText;
     public var profTxt:FlxText;
     public var descTxt:FlxText;
+    
+    var colorBGTween:FlxTween;
+    var iconTween:FlxTween;
     
     public var ytIcon:FlxSprite;
     public var twitIcon:FlxSprite;
