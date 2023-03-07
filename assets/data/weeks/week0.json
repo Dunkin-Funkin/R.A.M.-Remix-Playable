@@ -1,0 +1,24 @@
+{
+	"songs": [
+		{
+			"name": "R.A.M",
+			"opponent": "hex",
+			"colors": [
+				10,
+				240,
+				252
+			]
+		}
+	],
+	"attachedImage": "week0",
+	"storyName": "",
+	"characters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"startsLocked": false,
+	"hideOnStory": false,
+	"hideOnFreeplay": false,
+	"hideUntilUnlocked": false
+}
