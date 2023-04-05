@@ -37,7 +37,7 @@ class MainMenu extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
-	var optionShit:Array<String> = ['freeplay', 'credits', 'options'];
+	var optionShit:Array<String> = ['freeplay', 'options'];
 
 	public var logContent:String;
 
@@ -236,10 +236,10 @@ class MainMenu extends MusicBeatState
 								PlayState.gameplayMode = FREEPLAY;
 								PlayState.storyDifficulty = 2;
 								Main.switchState(this, new states.PlayState());
-							case 'credits':
-								transIn = FlxTransitionableState.defaultTransIn;
-								transOut = FlxTransitionableState.defaultTransOut;
-								Main.switchState(this, new CreditsMenu());
+							//case 'credits':
+								//transIn = FlxTransitionableState.defaultTransIn;
+								//transOut = FlxTransitionableState.defaultTransOut;
+								//Main.switchState(this, new CreditsMenu());
 							case 'options':
 								transIn = FlxTransitionableState.defaultTransIn;
 								transOut = FlxTransitionableState.defaultTransOut;
